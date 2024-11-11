@@ -1,3 +1,38 @@
+/* FONTS */
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/") format("woff2"),
+    url("/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2"),
+    url("/fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Medium.woff2") format("woff2"),
+    url("/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* CUSTOM PROPS */
+:root {
+  --text-color: #333;
+  --white-color: #fff;
+}
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,8 +52,8 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  line-height: 1.5;
-  font-family: "Arial", sans-serif;
+  line-height: 1.75;
+  font-family:"Roboto", "Arial", sans-serif;
   height: 100%;
   background-color: #fff;
   color: #222;
