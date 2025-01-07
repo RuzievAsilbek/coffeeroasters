@@ -61,6 +61,7 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
   line-height: 1.75;
   font-family:"Roboto", "Arial", sans-serif;
   height: 100%;
@@ -250,8 +251,20 @@ img {
   margin-bottom: 34px;
 }
 
+.hero-img-wrapper {
+  position: relative;
+}
+
+.hero-alfred {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
 
 .hero-img {
+  display: block;
   width: 730px;
   height: 596px;
   object-fit: cover;
@@ -268,6 +281,7 @@ img {
 }
 
 .index-collection-inner {
+  position: relative;
   background-color: var(--light-bg);
   padding: 50px 143px;
   background-image: url(/img/index-collection-bg.jpg);
@@ -325,6 +339,26 @@ img {
 .index-collection-text:not(:last-child) {
   margin-bottom: 10px;
 }
+
+.inner-leaves-left {
+  position: absolute;
+  top: 40px;
+  left: -150px;
+}
+
+.inner-leaves-right {
+  position: absolute;
+  top: 685px;
+  right: -329px;
+
+}
+
+.inner-leaves-left-light {
+  position: absolute;
+  bottom: 170px;
+  left: -216px;
+}
+
 
 
 /* INDEX-FEATURES */
@@ -397,6 +431,7 @@ img {
 /* HOW-IT-WORKS */
 
 .how-it-works-inner {
+  position: relative;
   padding: 50px 30px;
   background-image: url(/img/green-bg.jpg);
   background-repeat: no-repeat;
@@ -423,6 +458,7 @@ img {
   counter-reset: how-it-works;
 }
 .how-it-works-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: calc(100% / 3 - 20px);
@@ -430,9 +466,22 @@ img {
   counter-increment: how-it-works;
 }
 
+.how-it-works-item:not(:last-child):after {
+  position: absolute;
+  width: 433px;
+  top: 30px;
+  left: 35px;
+  height: 3px;
+  content: "";
+  background-image: url(/img/dashed.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .how-it-works-item::before {
   width: 60px;
   height: 60px;
+  z-index: 1;
   margin-bottom: 20px;
   background-color: var(--light-bg);
   border: 4px solid var(--accent-color-light-brown);
@@ -474,6 +523,12 @@ img {
 
 .how-it-works-cta:focus {
   outline-color: var(--accent-color-light-brown);
+}
+
+.how-it-works-stiker {
+  position: absolute;
+  top: 41px;
+  right: 68px;
 }
 
 
